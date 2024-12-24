@@ -8,6 +8,11 @@
 - Chế độ chơi với máy, 2 người trên cùng một máy hoặc qua mạng (online multiplayer).
 - Thống kê điểm số người chơi khi chơi online.
 
+## Luật chơi
+- Lớn ăn nhỏ: Có thể đánh đè lên đối thủ nếu dấu của mình lớn hơn đối thủ.
+- Duy trì trò chơi đến cuối cùng: Khi 9 ô đều được đánh, trò chơi vẫn tiếp tục.
+- Người chiến thắng là người chọn được 3 ô liên tiếp cùng là nước đi của mình (ngang, dọc, chéo).
+
 ## Công nghệ sử dụng
 - **Java**: Ngôn ngữ lập trình chính.
 - **JavaFX**: Giao diện đồ họa.
