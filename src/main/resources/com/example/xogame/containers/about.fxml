@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="500.0" prefWidth="650.0" styleClass="pane-content" stylesheets="@../stylesheet/appview.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="650.0" spacing="10.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="62.0" prefWidth="600.0" text="Welcome to GameXO!" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="650.0" text="Giới Thiệu:" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefWidth="650.0" text="Trò chơi GameXO mở rộng được xây dựng trên cơ sở của trò chơi &quot;XO&quot;, hay còn biết đến là &quot;Tic Tac Toe&quot;hoặc &quot;noughts and crosses&quot;. Với sự mở rộng này hy vọng người chơi sẽ có thêm nhiều trải nhiệm thú vị với các luật chơi mới này" wrapText="true">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefWidth="650.0" text="Tính Năng Nổi Bật:" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefWidth="650.0" text="- Lớn ăn nhỏ: Có thể đánh đè lên đối thủ nếu dấu của mình lớn hơn đối thủ." wrapText="true">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefWidth="650.0" text="- Duy trì trò chơi đến cuối cùng: Khi 9 ô đều được đánh, trò chơi vẫn tiếp tục." wrapText="true">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefWidth="650.0" text="Mục Tiêu Chính:" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefWidth="650.0" text="Chúng tôi hướng đến việc tạo ra một trải nghiệm chơi game không giới hạn và đầy thách thức. GameXO không chỉ là một trò chơi, mà là cuộc đấu trí căng não giữa hai người chơi." wrapText="true">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+<!--            <Label prefWidth="650.0" text="Kết Nối Với Chúng Tôi:" wrapText="true">-->
+<!--               <font>-->
+<!--                  <Font name="System Bold" size="12.0" />-->
+<!--               </font></Label>-->
+<!--            <HBox alignment="CENTER_LEFT">-->
+<!--               <children>-->
+<!--                  <Label text="Facebook: " wrapText="true" />-->
+<!--                  <Hyperlink fx:id="facebookContactLink" focusTraversable="false" onAction="#clickFacebookContact" text="https://www.facebook.com/NVDuy82" />-->
+<!--               </children>-->
+<!--               <VBox.margin>-->
+<!--                  <Insets left="20.0" />-->
+<!--               </VBox.margin>-->
+<!--            </HBox>-->
+<!--            <HBox alignment="CENTER_LEFT">-->
+<!--               <children>-->
+<!--                  <Label text="Email: " wrapText="true" />-->
+<!--                  <Label fx:id="email" text="duyn.dev@gmail.com" wrapText="true" />-->
+<!--                  <Button contentDisplay="GRAPHIC_ONLY" focusTraversable="false" mnemonicParsing="false" onAction="#copyEmailContact" prefHeight="24.0" prefWidth="24.0" styleClass="gray-button">-->
+<!--                     <cursor>-->
+<!--                        <Cursor fx:constant="HAND" />-->
+<!--                     </cursor>-->
+<!--                     <graphic>-->
+<!--                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                           <image>-->
+<!--                              <Image url="@../img/icons8-copy-24.png" />-->
+<!--                           </image>-->
+<!--                        </ImageView>-->
+<!--                     </graphic>-->
+<!--                     <padding>-->
+<!--                        <Insets bottom="-8.0" left="-8.0" right="-8.0" top="-8.0" />-->
+<!--                     </padding>-->
+<!--                     <HBox.margin>-->
+<!--                        <Insets left="5.0" />-->
+<!--                     </HBox.margin>-->
+<!--                  </Button>-->
+<!--               </children>-->
+<!--               <VBox.margin>-->
+<!--                  <Insets left="20.0" />-->
+<!--               </VBox.margin>-->
+<!--            </HBox>-->
+         </children>
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+      </VBox>
+   </children>
+</fx:root>

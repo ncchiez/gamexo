@@ -1,0 +1,34 @@
+.selection {
+    -fx-background-color: #d2dcf3;
+    -fx-text-fill: #2f2f2f;
+    -fx-background-radius: 13px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.selection:hover {
+    -fx-background-color: #5b87f1;
+    -fx-text-fill: #ffffff;
+}
+
+.selection:pressed {
+    -fx-background-color: #9eb8f6;
+    -fx-text-fill: #c9cfff;
+}
+
+.selected {
+    -fx-background-color: #3c75ff;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 13px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.selected:hover {
+    -fx-background-color: #5686fa;
+    -fx-text-fill: #ffffff;
+}
+
+.selected:pressed {
+    -fx-background-color: #6292ff;
+}

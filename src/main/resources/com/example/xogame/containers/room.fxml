@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="500.0" prefWidth="650.0" styleClass="pane-content" stylesheets="@../stylesheet/appview.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="225.0" layoutY="51.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="60.0" text="Room ID">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text=":" />
+            <Label fx:id="idRoom" />
+         </children>
+      </HBox>
+      <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="431.0" layoutY="47.0" mnemonicParsing="false" onAction="#copyID" prefHeight="25.0" prefWidth="25.0" styleClass="gray-button">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-copy-24.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <VBox layoutX="83.0" layoutY="134.0" prefHeight="224.0" prefWidth="201.0" spacing="10.0">
+         <children>
+            <Label text="Player A">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" startX="-100.0" stroke="#acacac" />
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Name">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text=":" />
+                  <Label fx:id="name" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Username">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text=":" />
+                  <Label fx:id="username" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Score">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text=":" />
+                  <Label fx:id="score" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Matches">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text=":" />
+                  <Label fx:id="matches" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Win">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text=":" />
+                  <Label fx:id="win" />
+                  <HBox>
+                     <children>
+                        <Label text="(" />
+                        <Label fx:id="ratioWin" />
+                        <Label text="\%)" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Lose">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text=":" />
+                  <Label fx:id="lose" />
+                  <HBox>
+                     <children>
+                        <Label text="(" />
+                        <Label fx:id="ratioLose" />
+                        <Label text="\%)" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Draw">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text=":" />
+                  <Label fx:id="draw" />
+                  <HBox>
+                     <children>
+                        <Label text="(" />
+                        <Label fx:id="ratioDraw" />
+                        <Label text="\%)" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="382.0" layoutY="134.0" prefHeight="224.0" prefWidth="201.0" spacing="10.0">
+         <children>
+            <Label text="Player B">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" startX="-100.0" stroke="#acacac" />
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Name">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text=":" />
+                  <Label fx:id="nameB" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Username">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text=":" />
+                  <Label fx:id="usernameB" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Score">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text=":" />
+                  <Label fx:id="scoreB" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Matches">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text=":" />
+                  <Label fx:id="matchesB" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Win">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text=":" />
+                  <Label fx:id="winB" />
+                  <HBox>
+                     <children>
+                        <Label text="(" />
+                        <Label fx:id="ratioWinB" />
+                        <Label text="\%)" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Lose">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text=":" />
+                  <Label fx:id="loseB" />
+                  <HBox>
+                     <children>
+                        <Label text="(" />
+                        <Label fx:id="ratioLoseB" />
+                        <Label text="\%)" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Draw">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text=":" />
+                  <Label fx:id="drawB" />
+                  <HBox>
+                     <children>
+                        <Label text="(" />
+                        <Label fx:id="ratioDrawB" />
+                        <Label text="\%)" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="startButton" layoutX="275.0" layoutY="419.0" mnemonicParsing="false" onAction="#startGame" prefHeight="40.0" prefWidth="100.0" styleClass="blue-button" text="Start Game &gt;&gt;" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#exitRoom" prefHeight="25.0" prefWidth="47.0" styleClass="gray-button" text="Exit">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+</fx:root>

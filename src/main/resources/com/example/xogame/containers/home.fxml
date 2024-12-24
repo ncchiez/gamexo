@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="500.0" prefWidth="650.0" styleClass="pane-content" stylesheets="@../stylesheet/appview.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="482.0" layoutY="423.0" mnemonicParsing="false" onAction="#findMatch" prefHeight="40.0" prefWidth="100.0" styleClass="blue-button" text="Find match &gt;&gt;" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <VBox layoutX="70.0" layoutY="30.0" prefHeight="224.0" prefWidth="201.0" spacing="10.0">
+         <children>
+            <Label text="Information">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" startX="-100.0" stroke="#acacac" />
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Name">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text=":" />
+                  <Label fx:id="name" text="name" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Username">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text=":" />
+                  <Label fx:id="username" text="username" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Score">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text=":" />
+                  <Label fx:id="score" text="score" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Matches">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text=":" />
+                  <Label fx:id="matches" text="0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Win">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text=":" />
+                  <Label fx:id="win" text="0" />
+                  <HBox>
+                     <children>
+                        <Label text="(" />
+                        <Label fx:id="ratioWin" text="0" />
+                        <Label text="\%)" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Lose">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text=":" />
+                  <Label fx:id="lose" text="0" />
+                  <HBox>
+                     <children>
+                        <Label text="(" />
+                        <Label fx:id="ratioLose" text="0" />
+                        <Label text="\%)" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Draw">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text=":" />
+                  <Label fx:id="draw" text="0" />
+                  <HBox>
+                     <children>
+                        <Label text="(" />
+                        <Label fx:id="ratioDraw" text="0" />
+                        <Label text="\%)" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <PieChart fx:id="pieChart" layoutX="71.0" layoutY="285.0" prefHeight="180.0" prefWidth="194.0" styleClass="pie" title="Match statistics" />
+      <VBox layoutX="381.0" layoutY="43.0" prefHeight="155.0" prefWidth="201.0" spacing="10.0">
+         <children>
+            <Label text="Create room">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" startX="-100.0" stroke="#acacac" />
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="55.0" text="Password" />
+                  <Label text=":" />
+                  <PasswordField fx:id="passCreate" prefWidth="130.0" promptText="password" styleClass="input-box" />
+               </children>
+            </HBox>
+            <VBox alignment="TOP_RIGHT" prefHeight="37.0" prefWidth="201.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#createRoom" prefHeight="25.0" prefWidth="62.0" styleClass="gray-button" text="create" textFill="#5a5a5a">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="382.0" layoutY="172.0" prefHeight="155.0" prefWidth="201.0" spacing="10.0">
+         <children>
+            <Label text="Join game">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" startX="-100.0" stroke="#acacac" />
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="55.0" text="ID room" />
+                  <Label text=":" />
+                  <TextField fx:id="idJoin" prefWidth="130.0" promptText="id_room" styleClass="input-box" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="55.0" text="Password" />
+                  <Label text=":" />
+                  <PasswordField fx:id="passJoin" prefWidth="130.0" promptText="password" styleClass="input-box" />
+               </children>
+            </HBox>
+            <VBox alignment="TOP_RIGHT" prefHeight="37.0" prefWidth="201.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#joinRoom" prefHeight="25.0" prefWidth="62.0" styleClass="gray-button" text="join" textFill="#5a5a5a">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</fx:root>

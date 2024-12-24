@@ -1,0 +1,53 @@
+
+.root {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10px;
+}
+
+.window-header-left {
+    -fx-background-color: rgba(218, 218, 218, 0.99);
+    -fx-background-radius: 10px 10px 0px 0px;
+}
+
+.window-header-right {
+    -fx-background-color: #f6f3f9;
+    -fx-background-radius: 0px 10px 0px 0px;
+    -fx-border-width: 0px 0px 3px 0px;
+    -fx-border-color: rgba(232, 232, 232, 0.2);
+}
+
+.exit-button {
+    -fx-background-color: #fd5754;
+    -fx-background-radius: 50%;
+    -fx-border-color: #e54645;
+    -fx-border-radius: 50%;
+    -fx-text-fill: transparent;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+.exit-button:hover {
+    -fx-text-fill: #800508;
+}
+
+.exit-button:pressed {
+    -fx-background-color: #fd423f;
+}
+
+.minimize-button {
+    -fx-background-color: #febb40;
+    -fx-background-radius: 50%;
+    -fx-border-color: #db9c33;
+    -fx-border-radius: 50%;
+    -fx-text-fill: transparent;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+.minimize-button:hover {
+    -fx-text-fill: #9b5612;
+}
+
+.minimize-button:pressed {
+    -fx-background-color: #eea422;
+}

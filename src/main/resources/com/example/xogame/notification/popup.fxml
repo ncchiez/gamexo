@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#close" prefHeight="273.0" prefWidth="268.0" styleClass="background" stylesheets="@../stylesheet/popup.css" type="AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="214.0" fitWidth="229.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../gif/1.gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="content" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="234.0" prefHeight="31.0" prefWidth="249.0" text="Nội dung" textAlignment="CENTER" />
+   </children>
+</fx:root>

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="content" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.xogame.controller.GameYourself">
+   <children>
+      <HBox fx:id="windowHeaderLeft" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="900.0" spacing="8.0" styleClass="window-header-left">
+         <children>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#exitApp" prefHeight="15.0" prefWidth="15.0" styleClass="exit-button" text="X">
+               <font>
+                  <Font name="System Bold" size="5.0" />
+               </font>
+            </Button>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#minimizeApp" prefHeight="15.0" prefWidth="15.0" styleClass="minimize-button" text="—">
+               <font>
+                  <Font name="System Bold" size="4.0" />
+               </font>
+            </Button>
+            <HBox fx:id="windowHeaderRight" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="650.0" spacing="20.0">
+               <HBox.margin>
+                  <Insets left="191.0" />
+               </HBox.margin>
+               <children>
+                  <Label fx:id="titleHeader" alignment="CENTER" prefHeight="27.0" prefWidth="350.0" text="Game started! Enjoy game" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </HBox>
+      <Pane layoutY="50.0" prefHeight="500.0" prefWidth="900.0" styleClass="pane-content">
+         <children>
+            <VBox layoutY="50.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-user-blue-100.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="-10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <HBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <Label fx:id="timeRemainingLabel" styleClass="time-limit" text="It's turn" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label prefWidth="48.0" text="Name">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text=":" />
+                        <Label fx:id="name" text="Label" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label prefWidth="48.0" text="Score">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text=":" />
+                        <Label fx:id="score" text="Label" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label prefWidth="48.0" text="Matches">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text=":" />
+                        <Label fx:id="matches" text="Label" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label prefWidth="48.0" text="Win">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text=":" />
+                        <Label fx:id="win" text="Label" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label prefWidth="48.0" text="Lose">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text=":" />
+                        <Label fx:id="lose" text="Label" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="190.0" layoutY="125.0" prefHeight="250.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="50.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/selection.png" />
+                     </image>
+                  </ImageView>
+                  <VBox fx:id="selectionBox" alignment="CENTER" prefHeight="250.0" prefWidth="100.0" spacing="25.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Button fx:id="smallSize" mnemonicParsing="false" onAction="#selectSize" prefHeight="50.0" prefWidth="50.0" styleClass="selected" text="X" textFill="#390ee4">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="10.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="numberOfSmall" text="x0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#selectSize" prefHeight="50.0" prefWidth="50.0" styleClass="selection" text="X" textFill="#390ee4">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="numberOfMedium" text="x3">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#selectSize" prefHeight="50.0" prefWidth="50.0" styleClass="selection" text="X" textFill="#390ee4">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="22.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="numberOfLarge" text="x1">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="300.0" layoutY="100.0" prefHeight="300.0" prefWidth="300.0">
+               <children>
+                  <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/board.png" />
+                     </image>
+                  </ImageView>
+                  <GridPane fx:id="board">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="square" />
+                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="square" GridPane.columnIndex="1" />
+                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="square" GridPane.columnIndex="2" />
+                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="square" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="square" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="square" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="square" GridPane.rowIndex="2" />
+                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="square" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="square" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="610.0" layoutY="125.0" prefHeight="250.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="50.0" layoutX="10.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/selection.png" />
+                     </image>
+                  </ImageView>
+                  <VBox fx:id="opponentSelectionBox" alignment="CENTER" prefHeight="250.0" prefWidth="100.0" spacing="25.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Button fx:id="opponentSmallSize" mnemonicParsing="false" onAction="#opponentSelectSize" prefHeight="50.0" prefWidth="50.0" styleClass="selection" text="O" textFill="#ff2020">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="10.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="opponentNumberOfSmall" text="x0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Button fx:id="opponentMediumSize" mnemonicParsing="false" onAction="#opponentSelectSize" prefHeight="50.0" prefWidth="50.0" styleClass="selection" text="O" textFill="#ff2020">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="opponentNumberOfMedium" text="x3">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Button fx:id="opponentLargeSize" mnemonicParsing="false" onAction="#opponentSelectSize" prefHeight="50.0" prefWidth="50.0" styleClass="selection" text="O" textFill="#ff2020">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="22.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="opponentNumberOfLarge" text="x1">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <VBox layoutX="720.0" layoutY="50.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-user-red-100.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="-10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <HBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <Label fx:id="opponentTimeRemainingLabel" styleClass="time-limit" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label prefWidth="48.0" text="Name">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text=":" />
+                        <Label fx:id="opponentName" text="Label" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label prefWidth="48.0" text="Score">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text=":" />
+                        <Label fx:id="opponentScore" text="Label" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label prefWidth="48.0" text="Matches">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text=":" />
+                        <Label fx:id="opponentMatches" text="Label" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label prefWidth="48.0" text="Win">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text=":" />
+                        <Label fx:id="opponentWin" text="Label" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label prefWidth="48.0" text="Lose">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text=":" />
+                        <Label fx:id="opponentLose" text="Label" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button fx:id="btn" alignment="CENTER" layoutX="770.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnAction" prefHeight="30.0" prefWidth="80.0" styleClass="resign" text="Resign">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../stylesheet/gameplay.css" />
+      <URL value="@../stylesheet/window.css" />
+   </stylesheets>
+</AnchorPane>

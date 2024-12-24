@@ -1,0 +1,102 @@
+
+.pane-content {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0px 0px 10px 10px;
+}
+
+.selection {
+    -fx-background-color: transparent;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.selection:hover {
+    -fx-background-color: #acacac;
+
+}
+
+.selection:pressed {
+    -fx-background-color: #c4c4c4;
+}
+
+.selected {
+    -fx-background-color: #d0d0d0;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.selected:hover {
+    -fx-background-color: #acacac;
+
+}
+
+.selected:pressed {
+    -fx-background-color: #c4c4c4;
+}
+
+.square {
+    -fx-background-color: transparent;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.square:hover {
+    -fx-background-color: #cbcbcb;
+
+}
+
+.square:pressed {
+    -fx-background-color: #bbbbbb;
+}
+
+.blue {
+    -fx-text-fill: #390ee4;
+}
+
+.red {
+    -fx-text-fill: #ff2020;
+}
+
+.small {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.medium {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-weight: bold;
+    -fx-font-size: 40px;
+}
+
+.large {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-weight: bold;
+    -fx-font-size: 82px;
+}
+
+.resign {
+    -fx-background-color: #ff2020;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 18px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.resign:hover {
+    -fx-background-color: #ff3b3b;
+}
+
+.resign:pressed {
+    -fx-background-color: #ff4e4e;
+}
+
+.time-limit {
+    -fx-background-color: #007a06;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-label-padding: 0px 7px 0px 7px;
+    -fx-background-radius: 18px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
